@@ -1,0 +1,26 @@
+{
+  "name": "redux-subspace-preloadedstate",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitaKolokoltsev/redux-subspace-preloadedState.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitaKolokoltsev/redux-subspace-preloadedState/issues"
+  },
+  "homepage": "https://github.com/NikitaKolokoltsev/redux-subspace-preloadedState#readme",
+  "dependencies": {
+    "redux": "^4.0.1",
+    "redux-subspace": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0"
+  }
+}
