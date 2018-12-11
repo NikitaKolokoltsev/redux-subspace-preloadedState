@@ -6,6 +6,10 @@ function script() {
 
   const adminStore = subspace(state => state.admin, 'admin')(appStore);
 
+  console.log('Store:')
+  console.log(JSON.stringify(appStore.getState(), null, 2));
+  console.log('\n======================\n');
+
   console.log('Admin Store:');
   console.log(JSON.stringify(adminStore.getState(), null, 2));
 
