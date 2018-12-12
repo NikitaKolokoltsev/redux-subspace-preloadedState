@@ -3,7 +3,7 @@
 Example project with the `redux-subspace` package demonstrating some problems with the prefilled state in the `redux` store while using the `namespaced()` functionality.
 
 Run the project:
-```
+```javascript
 node run
 ```
 
@@ -14,7 +14,7 @@ The difference between admins and users is that admin can change the view of the
 So, with that being said, I decided to create two reducers. The `usersReducer`, will hold the logic just for representing list of the users' profiles.
 And the `profileReducer` that will hold the logic for the way in which users can see the profiles list.
 After that I decided to make 2 namespaced reducers:
-```
+```javascript
 # reducer for default users
 const defaultReducers = namespaced('user')(
   combineReducers({
@@ -32,7 +32,7 @@ const adminReducers = namespaced('admin')(
 ```
 
 And then combined them to the one common reducer for the app:
-```
+```javascript
 const appReducer = combineReducers({
   user: defaultReducers,
   admin: adminReducers
@@ -40,7 +40,7 @@ const appReducer = combineReducers({
 ```
 
 So, right now, after deafult store creating, according to the default values defined in the reducers, I get the following store structure:
-```
+```javascript
 import { createStore } from 'redux';
 
 const store = createStore(appReducer);
@@ -65,7 +65,7 @@ const store = createStore(appReducer);
 
 **BUT:**
 If I try to create a store with prefilledState, then some of the default values are missing:
-```
+```javascript
 import { createStore } from 'redux';
 
 const prefilledState = {
